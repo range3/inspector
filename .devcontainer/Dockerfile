@@ -20,6 +20,10 @@ RUN apt-get update \
     codespell \
     ninja-build \
     lcov \
+    python3-pip \
+    python3-venv \
+    python3-jinja2 \
+    python3-pygments \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
