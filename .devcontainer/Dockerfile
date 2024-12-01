@@ -23,6 +23,11 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# Adjust installed vcpkg
+RUN git config --system --add safe.directory "${VCPKG_ROOT}" \
+  && cd "${VCPKG_ROOT}" \
+  && git fetch --unshallow
+
 # [Optional] Uncomment this section to install additional vcpkg ports.
 # RUN su vscode -c "${VCPKG_ROOT}/vcpkg install <your-port-name-here>"
 
