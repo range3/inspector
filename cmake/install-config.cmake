@@ -1,6 +1,6 @@
-include(CMakeFindDependencyMacro)
-find_dependency(fmt)
+# include(CMakeFindDependencyMacro)
+# find_dependency(fmt)
 
-if(fmt_FOUND)
-  include("${CMAKE_CURRENT_LIST_DIR}/inspectorTargets.cmake")
-endif()
+# if(fmt_FOUND)
+include("${CMAKE_CURRENT_LIST_DIR}/inspectorTargets.cmake")
+# endif()
