@@ -16,8 +16,10 @@ find_package(Catch2 REQUIRED)
 include(Catch)
 
 # ---- Tests ----
+file(GLOB_RECURSE TEST_SOURCES CONFIGURE_DEPENDS
+     "${CMAKE_CURRENT_SOURCE_DIR}/source/*_test.cpp")
 
-add_executable(inspector_test source/inspector_test.cpp)
+add_executable(inspector_test ${TEST_SOURCES})
 target_link_libraries(
     inspector_test PRIVATE
     inspector::inspector
