@@ -5,7 +5,7 @@
 
 #include "core.hpp"
 
-namespace inspector {
+namespace insp {
 
 template <typename T>
 struct inspector<std::optional<T>> {
@@ -18,4 +18,4 @@ struct inspector<std::optional<T>> {
   }
 };
 
-}  // namespace inspector
+}  // namespace insp

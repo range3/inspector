@@ -6,7 +6,7 @@
 
 #include "core.hpp"
 
-namespace inspector {
+namespace insp {
 
 template <typename T1, typename T2>
 struct inspector<std::pair<T1, T2>> {
@@ -41,4 +41,4 @@ struct inspector<std::tuple<Args...>> {
   }
 };
 
-}  // namespace inspector
+}  // namespace insp

@@ -15,7 +15,7 @@
 
 #include "core.hpp"
 
-namespace inspector {
+namespace insp {
 namespace detail {
 
 template <typename Iter>
@@ -212,4 +212,4 @@ struct inspector<std::priority_queue<T>> {
   }
 };
 
-}  // namespace inspector
+}  // namespace insp

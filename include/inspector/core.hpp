@@ -4,7 +4,7 @@
 #include <sstream>
 #include <type_traits>
 
-namespace inspector {
+namespace insp {
 
 template <typename T>
 struct inspector {
@@ -73,4 +73,4 @@ auto to_string(const T& obj) -> std::string {
   return ss.str();
 }
 
-}  // namespace inspector
+}  // namespace insp

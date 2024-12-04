@@ -30,7 +30,7 @@ class intrusive_with_non_intrusive {
 
  public:
   auto inspect(std::ostream& os) const -> std::ostream& {
-    return os << "(" << inspector::make_inspectable(nic_) << ")";
+    return os << "(" << insp::make_inspectable(nic_) << ")";
   }
 };
 
@@ -41,7 +41,7 @@ auto inspect(std::ostream& os,
 
 auto inspect(std::ostream& os,
              const non_intrusive_with_intrusive& obj) -> std::ostream& {
-  return os << "(" << inspector::make_inspectable(obj.ic) << ")";
+  return os << "(" << insp::make_inspectable(obj.ic) << ")";
 }
 
 }  // namespace user_defined_ns
@@ -53,12 +53,12 @@ TEST_CASE("Inspector core functionality", "[core]") {
 
     SECTION("using make_inspectable") {
       std::stringstream ss;
-      ss << inspector::make_inspectable(obj);
+      ss << insp::make_inspectable(obj);
       REQUIRE(ss.str() == expected);
     }
 
     SECTION("using to_string") {
-      REQUIRE(inspector::to_string(obj) == expected);
+      REQUIRE(insp::to_string(obj) == expected);
     }
   }
 
@@ -68,12 +68,12 @@ TEST_CASE("Inspector core functionality", "[core]") {
 
     SECTION("using make_inspectable") {
       std::stringstream ss;
-      ss << inspector::make_inspectable(obj);
+      ss << insp::make_inspectable(obj);
       REQUIRE(ss.str() == expected);
     }
 
     SECTION("using to_string") {
-      REQUIRE(inspector::to_string(obj) == expected);
+      REQUIRE(insp::to_string(obj) == expected);
     }
   }
 
@@ -84,12 +84,12 @@ TEST_CASE("Inspector core functionality", "[core]") {
 
       SECTION("using make_inspectable") {
         std::stringstream ss;
-        ss << inspector::make_inspectable(obj);
+        ss << insp::make_inspectable(obj);
         REQUIRE(ss.str() == expected);
       }
 
       SECTION("using to_string") {
-        REQUIRE(inspector::to_string(obj) == expected);
+        REQUIRE(insp::to_string(obj) == expected);
       }
     }
 
@@ -99,12 +99,12 @@ TEST_CASE("Inspector core functionality", "[core]") {
 
       SECTION("using make_inspectable") {
         std::stringstream ss;
-        ss << inspector::make_inspectable(obj);
+        ss << insp::make_inspectable(obj);
         REQUIRE(ss.str() == expected);
       }
 
       SECTION("using to_string") {
-        REQUIRE(inspector::to_string(obj) == expected);
+        REQUIRE(insp::to_string(obj) == expected);
       }
     }
   }

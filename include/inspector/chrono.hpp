@@ -6,7 +6,7 @@
 
 #include "core.hpp"
 
-namespace inspector {
+namespace insp {
 namespace detail {
 
 struct duration_unit {
@@ -74,4 +74,4 @@ struct inspector<std::chrono::duration<Rep, Period>> {
   }
 };
 
-}  // namespace inspector
+}  // namespace insp
